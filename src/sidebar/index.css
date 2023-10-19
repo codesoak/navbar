@@ -1,0 +1,60 @@
+main {
+    display: flex;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: rgb(139, 139, 139);
+    background-color: black;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(8, 15, 36);
+    width: 15rem;
+}
+
+.sidebar button {
+    width: 100%;
+    background-color: rgb(8, 15, 36);
+    padding: .5rem 1rem;
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    display: flex;
+    column-gap: .4rem;
+}
+
+.sidebar button:hover {
+    background-color: rgb(31, 62, 202);
+    cursor: pointer;
+}
+
+.category {
+    font-weight: bold;
+}
+
+.subCategory {
+    padding-left: 1rem;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s, transform .5s ease-in-out;
+}
+
+.subCategory button {
+    font-weight: 500;
+}
+
+.subCategory.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY();
+    display: block;
+}
