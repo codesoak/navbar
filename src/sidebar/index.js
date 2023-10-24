@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMobileScreen, faLaptop, faTablet, faClock, faGamepad, faArrowUp, faHouse, faKeyboard, faPerson, faShirt, faSocks } from '@fortawesome/free-solid-svg-icons'
+import { faMobileScreen, faLaptop, faTablet, faClock, faGamepad, faArrowUp, faArrowDown, faHouse, faKeyboard, faPerson, faShirt, faSocks } from '@fortawesome/free-solid-svg-icons'
 import './index.css'
 
 export default function Sidebar() {
@@ -34,6 +34,11 @@ function Electronics() {
             <button onClick={() => setVisible(!visible)}>
                 <FontAwesomeIcon icon={faKeyboard} style={{ color: 'white' }} />
                 Electronics
+                {visible ?
+                    <FontAwesomeIcon icon={faArrowUp} style={{ color: 'rgb(139, 139, 139)' }} />
+                    :
+                    <FontAwesomeIcon icon={faArrowDown} style={{ color: 'rgb(139, 139, 139)' }} />
+                }
             </button>
             <div className={`subCategory ${visible ? 'visible' : ''}`}>
                 <button>
@@ -68,6 +73,11 @@ function MenWear() {
             <button onClick={() => setVisible(!visible)}>
                 <FontAwesomeIcon icon={faPerson} style={{ color: 'white' }} />
                 Men's Wear
+                {visible ?
+                    <FontAwesomeIcon icon={faArrowUp} style={{ color: 'rgb(139, 139, 139)' }} />
+                    :
+                    <FontAwesomeIcon icon={faArrowDown} style={{ color: 'rgb(139, 139, 139)' }} />
+                }
             </button>
             <div className={`subCategory ${visible ? 'visible' : ''}`}>
                 <button>
